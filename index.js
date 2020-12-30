@@ -1,3 +1,4 @@
+//Clases
 class Vehicle {
     constructor(marca, modelo, precio) {
         this.marca = marca;
@@ -30,14 +31,17 @@ var auto2 = new Auto('Peugeot', '208 ', 250000.00, 5);
 var moto1 = new Moto('Yamaha', 'YBR', 80500.50, 160)
 var moto2 = new Moto('Honda', 'Titan', 60000.50, 125)
 
+//Guardando objetos en Array
 var Vehiculos = [auto1, moto2, auto2, moto1];
 
+//Mostrar toda la informacion
 function getAllData(){
     for (var i = 0; i < Vehiculos.length; i++) {
         Vehiculos[i].showData();
     }
 }
 
+//Obtener el vehiculo mas caro
 function getVehiculoCaro(){
     var indexVehiculo;
     var precio = 0;
@@ -50,7 +54,7 @@ function getVehiculoCaro(){
     console.log("Vehiculo más caro: " + Vehiculos[indexVehiculo].marca + " " + Vehiculos[indexVehiculo].modelo);
 }
 
-
+//Obtener el vehiculo mas barato
 function getVehiculoBarato(){
     var indexVehiculo = 0;
     var precio = Vehiculos[0].precio;
@@ -63,6 +67,7 @@ function getVehiculoBarato(){
     console.log("Vehiculo más Barato: " + Vehiculos[indexVehiculo].marca + " " + Vehiculos[indexVehiculo].modelo);
 }
 
+//Obtener vehiculo que tenga determinada letra en el modelo
 function getModeloByLetra(letra){
     var indexVehiculo;
     for (var i = 1; i < Vehiculos.length; i++) {
@@ -79,6 +84,7 @@ function getModeloByLetra(letra){
 
 }
 
+//Ordenar vehiculos por precio de mayor a menor
 function getVehiculosOrder(){
     console.log("Vehículos ordenados por precio de mayor a menor:");
     var vehiculosOrder = this.Vehiculos.sort(((a, b) => b.precio - a.precio));
@@ -87,6 +93,7 @@ function getVehiculosOrder(){
     }
 }
 
+//monstrar en consola
 function pintarEnConsola(){
     getAllData();
     console.log("=============================");
