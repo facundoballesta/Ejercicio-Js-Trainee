@@ -4,24 +4,11 @@ class Vehicle {
         this.modelo = modelo;
         this.precio = precio;
     }
-
-    showMarca() {
-        console.log(this.marca);
-    }
-    showModelo() {
-        console.log(this.modelo);
-    }
-    showPrecio() {
-        console.log(this.precio);
-    }
 }
 class Auto extends Vehicle {
     constructor(marca, modelo, precio, puertas) {
         super(marca, modelo, precio);
         this.puertas = puertas;
-    }
-    showPuertas() {
-        console.log(this.puertas);
     }
     showData() {
         console.log("Marca: " + this.marca + " // Modelo: " + this.modelo + " // Puertas: " + this.puertas + " // Precio: $" + this.precio.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}))
@@ -32,9 +19,6 @@ class Moto extends Vehicle {
     constructor(marca, modelo, precio, cilindrada) {
         super(marca, modelo, precio);
         this.cilindrada = cilindrada;
-    }
-    showCilindrada() {
-        console.log(this.cilindrada);
     }
     showData() {
         console.log("Marca: " + this.marca + " // Modelo: " + this.modelo + " // Cilindrada: " + this.cilindrada + "cc // Precio: $" + this.precio.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}))
