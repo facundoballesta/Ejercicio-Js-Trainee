@@ -26,6 +26,7 @@ class Moto extends Vehicle {
     }
 }
 
+//Creando Objetos
 var auto1 = new Auto('Peugeot', '206 ', 200000.00, 4);
 var auto2 = new Auto('Peugeot', '208 ', 250000.00, 5);
 var moto1 = new Moto('Yamaha', 'YBR', 80500.50, 160)
